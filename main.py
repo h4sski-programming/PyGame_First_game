@@ -2,6 +2,7 @@ import sys
 import pygame as pg
 
 from settings import *
+from button import Btn
 
 
 class Game:
@@ -10,9 +11,11 @@ class Game:
         self.screen = pg.display.set_mode(RESOLUTION)
         self.clock = pg.time.Clock()
         self.is_running = True
+        self.new_game()
 
-    def new_game(slef):
-        pass
+    def new_game(self):
+        self.btnA = Btn(self, 'A', 'blue')
+        self.btnB = Btn(self, 'B', 'green')
 
     def update(self):
         pg.display.flip()
@@ -21,6 +24,8 @@ class Game:
 
     def draw(self):
         self.screen.fill('black')
+        self.btnA.draw()
+        self.btnB.draw()
 
     def check_events(self):
         for event in pg.event.get():
