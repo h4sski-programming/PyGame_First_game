@@ -1,0 +1,8 @@
+@@  coded by h4sski  @@
+
+commands
+    sudo apt-get install python3-pygame
+    sudo python3 -m pip install pygame
+
+Sources:
+    https://www.youtube.com/watch?v=ECqUrT7IdqQ
